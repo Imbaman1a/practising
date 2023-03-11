@@ -17,10 +17,11 @@ class Queue:
         node = Node(item)
 
         if self.rear is None:
-            self.front = node
-            self.rear = node
+            self.front = node   # Some magic? 
+            self.rear = node    # Somehow
         else:
             self.rear.next = node
+            #print(self.rear.next.data, 'and', self.front.next.data)
             self.rear = node
 
     def dequeue(self):
